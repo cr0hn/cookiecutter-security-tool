@@ -1,6 +1,2 @@
-click
 ujson
 uvloop
-aiohttp
-colorlog
-booby-ng

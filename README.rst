@@ -8,4 +8,9 @@ This project is a template for cookie cutter engine. It provides a command line 
 Usage
 =====
 
-To usage the template
+To usage the template you must write:
+
+```bash
+
+cookiecutter https://github.com/cr0hn/cookiecutter-security-tool
+```

@@ -3,7 +3,7 @@ import logging
 from .model import *
 from .helpers import *
 
-log = logging.getLogger({{ cookiecutter.tool_name }})
+log = logging.getLogger('{{ cookiecutter.tool_name }}')
 
 
 def launch_{{ cookiecutter.tool_name }}_in_console(shared_config, **kwargs):
@@ -36,3 +36,6 @@ def launch_{{ cookiecutter.tool_name }}_in_console(shared_config, **kwargs):
         log.exception("[!] Unhandled exception: %s" % e, stack_info=True)
     finally:
         log.console("Shutdown...")
+        
+
+__all__ = ("launch_{{ cookiecutter.tool_name }}_in_console",)
