@@ -1,0 +1,4 @@
+click
+aiohttp
+colorlog
+booby-ng
