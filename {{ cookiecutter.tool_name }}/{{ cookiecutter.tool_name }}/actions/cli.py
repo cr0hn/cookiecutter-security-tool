@@ -21,7 +21,6 @@ def cli(ctx, **kwargs):
 @click.pass_context
 @click.argument('target', required=True)
 def info(ctx, **kwargs):
-    """Launch a Golismero Scan"""
     
     launch_{{cookiecutter.tool_name}}_in_console(ctx.obj, **kwargs)
 

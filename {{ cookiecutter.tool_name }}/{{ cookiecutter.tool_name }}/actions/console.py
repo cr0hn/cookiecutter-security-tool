@@ -15,7 +15,7 @@ def launch_{{ cookiecutter.tool_name }}_in_console(shared_config, **kwargs):
     all_config.update(kwargs)
     
     # Load confaig
-    config = {{ cookiecutter.tool_name }}Model(**all_config)
+    config = {{ cookiecutter.tool_name | capitalize }}Model(**all_config)
     
     # Check if config is valid
     if not config.is_valid:
