@@ -10,7 +10,6 @@ Usage
 
 To usage the template you must write:
 
-```bash
-
+```sh
 cookiecutter https://github.com/cr0hn/cookiecutter-security-tool
 ```
