@@ -32,7 +32,7 @@ with open(join(dirname(__file__), 'requirements.txt')) as f:
 with open(join(dirname(__file__), 'requirements-performance.txt')) as f:
     required_performance = f.read().splitlines()
 
-with open(join(dirname(__file__), 'README.rst')) as f:
+with open(join(dirname(__file__), 'README.md')) as f:
     long_description = f.read()
 
 setup(
