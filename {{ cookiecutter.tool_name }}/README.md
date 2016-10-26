@@ -36,7 +36,7 @@ Simple
 Install {{ cookiecutter.tool_name }} is so easy:
 
 ```
-$ python -m pip install {{ cookiecutter.tool_name }}
+$ python3.5 -m pip install {{ cookiecutter.tool_name }}
 ```
 
 With extra performance
@@ -47,7 +47,7 @@ With extra performance
 To install the tool with extra performance you must do:
 
 ```
-$ python -m pip install '{{ cookiecutter.tool_name }}[performance]'
+$ python3.5 -m pip install '{{ cookiecutter.tool_name }}[performance]'
 ```
 
 **Remember that {{ cookiecutter.tool_name }} only runs in Python 3.5 and above**.
