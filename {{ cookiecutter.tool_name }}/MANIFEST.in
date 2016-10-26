@@ -15,5 +15,5 @@ global-exclude .DS_Store
 global-exclude .mailmap
 prune {{ cookiecutter.tool_name|replace("-", "_")}}/doc*
 
-graft {{ cookiecutter.tool_name|replace("-", "_")}}}/resources/*
+graft {{ cookiecutter.tool_name|replace("-", "_")}}/resources/*
 
