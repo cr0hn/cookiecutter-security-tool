@@ -4,4 +4,4 @@ from .helpers import *
 from .exceptions import *
 from .shared_cmd_options import *
 
-setup_logging("sample")
+setup_logging("{{ cookiecutter.tool_name }}")

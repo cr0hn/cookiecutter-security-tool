@@ -3,9 +3,9 @@
 import click
 import logging
 
-from {{ cookiecutter.tool_name }} import global_options
+from {{ cookiecutter.tool_name | replace("-", "_")}} import global_options
 
-from .console import launch_{{ cookiecutter.tool_name }}_in_console
+from .console import launch_{{ cookiecutter.tool_name | replace("-", "_")}}_in_console
 
 
 log = logging.getLogger('{{ cookiecutter.tool_name }}')
@@ -22,7 +22,7 @@ def cli(ctx, **kwargs):
 @click.argument('target', required=True)
 def info(ctx, **kwargs):
     
-    launch_{{cookiecutter.tool_name}}_in_console(ctx.obj, **kwargs)
+    launch_{{cookiecutter.tool_name | replace("-", "_") }}_in_console(ctx.obj, **kwargs)
 
 
 if __name__ == "__main__" and __package__ is None:

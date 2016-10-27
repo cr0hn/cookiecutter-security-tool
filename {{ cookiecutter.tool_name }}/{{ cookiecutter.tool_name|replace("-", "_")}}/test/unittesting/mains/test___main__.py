@@ -4,7 +4,7 @@ def main():
     
     parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     sys.path.insert(1, parent_dir)
-    import {{ cookiecutter.tool_name | replace("-", "_")}}
+    import {{ cookiecutter.tool_name | replace("-", "_") }}
     
     __package__ = str("{{ cookiecutter.tool_name | replace("-", "_") }}")
     
@@ -13,6 +13,6 @@ def main():
     
     cli()
 
+
 if __name__ == "__main__":
     main()  # pragma no cover
-

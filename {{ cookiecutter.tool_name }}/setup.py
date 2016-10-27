@@ -25,6 +25,7 @@
 
 from os.path import dirname, join
 from setuptools import setup, find_packages
+from setuptools.command.test import test as TestCommand
 
 with open(join(dirname(__file__), 'requirements.txt')) as f:
     required = f.read().splitlines()
@@ -32,8 +33,22 @@ with open(join(dirname(__file__), 'requirements.txt')) as f:
 with open(join(dirname(__file__), 'requirements-performance.txt')) as f:
     required_performance = f.read().splitlines()
 
+with open(join(dirname(__file__), 'requirements-runtest.txt')) as f:
+    required_test = f.read().splitlines()
+
 with open(join(dirname(__file__), 'README.md')) as f:
     long_description = f.read()
+
+
+class PyTest(TestCommand):
+    user_options = []
+    
+    def run(self):
+        import subprocess
+        import sys
+        errno = subprocess.call([sys.executable, '-m', 'pytest', '--cov-report', 'html', '--cov-report', 'term', '--cov', 'apitest'])
+        raise SystemExit(errno)
+
 
 setup(
     name='{{ cookiecutter.tool_name|lower| replace(" ", "_")  }}',
@@ -63,6 +78,8 @@ setup(
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3.5',
         'Topic :: Security',
-    ]
+    ],
+    tests_require=required_test,
+    cmdclass=dict(test=PyTest)
 )
 

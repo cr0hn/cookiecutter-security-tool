@@ -1,16 +1,16 @@
 import logging
 
 from .model import *
-from .helpers import *
+from ..helpers import *
 
 log = logging.getLogger('{{ cookiecutter.tool_name }}')
 
 
-def launch_{{ cookiecutter.tool_name }}_in_console(shared_config, **kwargs):
+def launch_{{ cookiecutter.tool_name | replace("-", "_")}}_in_console(shared_config, **kwargs):
     """Launch in console mode"""
     
     # Load config
-    config = {{ cookiecutter.tool_name | capitalize }}Model(**shared_config, **kwargs)
+    config = {{ cookiecutter.tool_name | capitalize | replace("-", "") }}Model(**shared_config, **kwargs)
     
     # Check if config is valid
     if not config.is_valid:

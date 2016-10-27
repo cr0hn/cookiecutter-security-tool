@@ -1,4 +1,2 @@
-from .cli import *
-from .model import *
-from .console import *
+from .default import *
 from .helpers import *

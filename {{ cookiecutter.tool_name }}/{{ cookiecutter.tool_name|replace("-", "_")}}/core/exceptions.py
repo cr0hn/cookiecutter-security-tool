@@ -1,13 +1,13 @@
-class {{ cookiecutter.tool_name | capitalize }}Error(Exception):
+class {{ cookiecutter.tool_name | capitalize | replace("-", "")}}Error(Exception):
     pass
 
 
-class {{ cookiecutter.tool_name | capitalize }}ValueError(ValueError):
+class {{ cookiecutter.tool_name | capitalize | replace("-", "")}}ValueError(ValueError):
     pass
 
 
-class {{ cookiecutter.tool_name | capitalize }}TypeError(TypeError):
+class {{ cookiecutter.tool_name | capitalize | replace("-", "")}}TypeError(TypeError):
     pass
 
 
-__all__ = ("{{ cookiecutter.tool_name | capitalize}}Error", "{{ cookiecutter.tool_name | capitalize}}ValueError", "{{ cookiecutter.tool_name | capitalize}}TypeError")
+__all__ = ("{{ cookiecutter.tool_name | capitalize| replace("-", "")}}Error", "{{ cookiecutter.tool_name | capitalize | replace("-", "")}}ValueError", "{{ cookiecutter.tool_name | capitalize | replace("-", "")}}TypeError")
