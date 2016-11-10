@@ -1,9 +1,15 @@
 {
   "tool_name": "sample",
+  "tool_name_slug": "{{ cookiecutter.tool_name.lower() | replace(' ', '_') | replace('-', '_') }}",
   "brief_description": "Brief description",
-  "long_description": "Long description",
-  "author": "Author Name",
+  "long_description": "{{ cookiecutter.brief_description }}",
+  "github_user": "author",
+  "github_repo": "{{ cookiecutter.tool_name_slug }}",
+  "author": "{{ cookiecutter.github_user }}",
   "author_mail": "author@mail.com",
-  "project_site": "http://sample.com",
-  "project_version": "1.0.0"
+  "project_site": "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}",
+  "project_version": "1.0.0",
+  "tool_name_camel_case": "{{ cookiecutter.tool_name.lower() | replace(' ', '') | replace('-', '') | capitalize }}",
+  "year": "{% now 'utc', '%Y' %}",
+  "_extensions": ["jinja2_time.TimeExtension"]
 }
