@@ -2,7 +2,12 @@
 This file contains utils and reusable functions
 """
 
+import logging
+
 from collections import namedtuple
+from contextlib import contextmanager
+
+log = logging.getLogger('{{ cookiecutter.tool_name_slug }}')
 
 
 def dict_to_obj(data):
@@ -18,12 +23,38 @@ def dict_to_obj(data):
     :type data: dict
     """
     assert isinstance(data, dict)
-    
+
     if not data:
         return namedtuple("OBJ", [])
-    
+
     obj = namedtuple("OBJ", list(data.keys()))
-    
+
     return obj(**data)
 
-__all__ = ("dict_to_obj", )
+
+def get_log_level(verbosity: int) -> int:
+    verbosity *= 10
+
+    if verbosity > logging.CRITICAL:
+        verbosity = logging.CRITICAL
+
+    if verbosity < logging.DEBUG:
+        verbosity = logging.DEBUG
+
+    return (logging.CRITICAL - verbosity) + 10
+
+
+@contextmanager
+def run_in_console(debug=False):
+    try:
+        yield
+    except Exception as e:
+        log.critical(" !! {}".format(e))
+
+        if debug:
+            log.exception(" !! Unhandled exception: %s" % e, stack_info=True)
+    finally:
+        log.debug("Shutdown...")
+
+
+__all__ = ("dict_to_obj", "get_log_level", "run_in_console")

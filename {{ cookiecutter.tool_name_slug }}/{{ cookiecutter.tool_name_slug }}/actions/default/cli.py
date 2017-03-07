@@ -1,29 +1,23 @@
-#!/usr/bin/env python3
-
 import click
 import logging
 
-from {{ cookiecutter.tool_name_slug }} import global_options
-
-from .console import launch_{{ cookiecutter.tool_name_slug }}_in_console
+from .model import {{ cookiecutter.tool_name_camel_case }}DefaultModel
+from .console import launch_{{ cookiecutter.tool_name_slug }}_default_in_console
+from ..helpers import check_console_input_config
 
 
 log = logging.getLogger('{{ cookiecutter.tool_name_slug }}')
 
 
-@global_options()
-@click.pass_context
-def cli(ctx, **kwargs):  # pragma no cover
-    ctx.obj = kwargs
-
-
-@cli.command(help="Launch {{ cookiecutter.tool_name }}")
+@click.command(help="Launch {{ cookiecutter.tool_name }}")
 @click.pass_context
 @click.argument('target', required=True)
 def info(ctx, **kwargs):
-    
-    launch_{{cookiecutter.tool_name_slug }}_in_console(ctx.obj, **kwargs)
+    config = {{ cookiecutter.tool_name_camel_case }}DefaultModel(**ctx.obj, **kwargs)
+
+    # Check if valid
+    if check_console_input_config(config):
+        launch_{{cookiecutter.tool_name_slug}}_default_in_console(config)
 
 
-if __name__ == "__main__" and __package__ is None:  # pragma no cover
-    cli()
+__all__ = ("info", )
