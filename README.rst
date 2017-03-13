@@ -22,7 +22,7 @@ Usage
 
 To usage the template you must write:
 
-```sh
+.. code-block:: bash
 
-> cookiecutter https://github.com/cr0hn/cookiecutter-security-tool
-```
+  > cookiecutter https://github.com/cr0hn/cookiecutter-security-tool
+
