@@ -2,7 +2,7 @@ import logging
 
 from .api import *
 from .model import *
-from ...helpers import *
+from ...core.helpers import *
 
 log = logging.getLogger('{{ cookiecutter.tool_name_slug }}')
 
