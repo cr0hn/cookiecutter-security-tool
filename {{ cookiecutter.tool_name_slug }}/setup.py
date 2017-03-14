@@ -100,7 +100,7 @@ setup(
         'performance':  required_performance
     },
     entry_points={'console_scripts': [
-        '{{ cookiecutter.tool_name_slug | replace("_", "-") }} = {{ cookiecutter.tool_name_slug }}.actions.default.cli:cli',
+        '{{ cookiecutter.tool_name_slug | replace("_", "-") }} = {{ cookiecutter.tool_name_slug }}.actions.cli:cli',
     ]},
     description='{{ cookiecutter.brief_description }}',
     long_description=long_description,
