@@ -52,7 +52,7 @@ def run_in_console(debug=False):
         log.critical(" !! {}".format(e))
 
         if debug:
-            log.exception(" !! Unhandled exception: %s" % e, stack_info=True)
+            log.critical(e, exc_info=True)
     finally:
         log.debug("Shutdown...")
 
