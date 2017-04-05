@@ -8,16 +8,32 @@
     :width: 64px
     :alt: {{ cookiecutter.tool_name }} logo
 
+.. image:: https://travis-ci.org//{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}.svg?branch=master
+    :target: https://travis-ci.org/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}
+
+.. image:: https://img.shields.io/pypi/l/Django.svg
+    :target: https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/blob/master/LICENSE
+
+.. image:: https://img.shields.io/pypi/status/Django.svg
+    :target: https://pypi.python.org/pypi/{{ cookiecutter.github_repo }}/1.0.0
+
+.. image:: https://codecov.io/gh//{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}
+
+.. image:: https://readthedocs.org/projects/{{ cookiecutter.github_user }}/badge/?version=latest
+    :target: http://{{ cookiecutter.github_repo }}.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 +----------------+--------------------------------------------+
 |Project site    | https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}        |
 +----------------+--------------------------------------------+
 |Issues          | https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/issues/|
 +----------------+--------------------------------------------+
-|Documentation   | https://{{ cookiecutter.github_repo }}.readthedocs.org/        |
+|Documentation   | https://{{ cookiecutter.github_repo }}.readthedocs.io/ |
 +----------------+--------------------------------------------+
 |Authors         | {{ cookiecutter.author }}      |
 +----------------+--------------------------------------------+
-|Latest Version  | 1.0.0                                      |
+|Latest Version  | 1.0.0-alpha                                |
 +----------------+--------------------------------------------+
 |Python versions | 3.5 or above                               |
 +----------------+--------------------------------------------+
@@ -30,16 +46,18 @@ What's {{ cookiecutter.tool_name }}
 Documentation
 =============
 
-Go to documentation site: https://{{ cookiecutter.github_repo }}.readthedocs.org/
+Go to documentation site: https://{{ cookiecutter.github_repo }}.readthedocs.io/
 
-Contributing
-============
+Contributors
+------------
 
-Any collaboration is welcome!
+Contributors are welcome. You can find a list ot TODO tasks in the `TODO.md
+<https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/blob/master/TODO.md>`_ at the project file.
 
-There're many tasks to do.You can check the `Issues <https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/issues/>`_ and send us a Pull Request.
+All contributors will be added to the `CONTRIBUTORS.md
+<https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/blob/master/CONTRIBUTORS.md>`_ file.
 
-Also you can read the `TODO <https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}/blob/master/TODO.md>`_ file.
+Thanks in advance if you're planning to contribute to the project! :)
 
 License
 =======

@@ -147,12 +147,12 @@ html_theme_options = {
     'github_banner': True,
     'travis_button': True,
     'codecov_button': True,
-    'pre_bg': '#FFF6E5',
-    'note_bg': '#E5ECD1',
-    'note_border': '#BFCF8C',
-    'body_text': '#482C0A',
-    'sidebar_text': '#49443E',
-    'sidebar_header': '#4B4032',
+    # 'pre_bg': '#FFF6E5',
+    # 'note_bg': '#E5ECD1',
+    # 'note_border': '#BFCF8C',
+    # 'body_text': '#482C0A',
+    # 'sidebar_text': '#49443E',
+    # 'sidebar_header': '#4B4032',
     'show_powered_by': False
 }
 
@@ -233,13 +233,13 @@ htmlhelp_basename = '{{ cookiecutter.tool_name_slug }}'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #'papersize': 'letterpaper',
-    
+
     # The font size ('10pt', '11pt' or '12pt').
     #'pointsize': '10pt',
-    
+
     # Additional stuff for the LaTeX preamble.
     #'preamble': '',
-    
+
     # Latex figure (float) alignment
     #'figure_align': 'htbp',
 }

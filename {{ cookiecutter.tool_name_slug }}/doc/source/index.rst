@@ -3,12 +3,12 @@ Welcome to {{ cookiecutter.tool_name }}'s documentation!
 
 +----------------+------------------------------------+
 {%- if cookiecutter.github_repo and cookiecutter.github_user %}
-|Project site    | http://github.com/bbva/apitest     |
+|Project site    | http://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.github_repo }}     |
 +----------------+------------------------------------+
 |Author          | {{ cookiecutter.author }}  |
 +----------------+------------------------------------+
 {%- endif %}
-|Documentation   | http://{{ cookiecutter.tool_name_slug }}.readthedocs.org     |
+|Documentation   | http://{{ cookiecutter.github_repo }}.readthedocs.io |
 +----------------+------------------------------------+
 |Last Version    | {{ cookiecutter.project_version }}                              |
 +----------------+------------------------------------+
@@ -23,7 +23,9 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   install
    quickstart
+
 
 Indices and tables
 ==================
